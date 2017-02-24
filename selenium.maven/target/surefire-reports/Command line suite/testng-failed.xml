@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="EndToEnd.BFUIJobsExcnVldtnTest">
+        <methods>
+          <include name="testStep1BFLogin"/>
+          <include name="testStep6BFRunAlgoVldtn"/>
+          <include name="testStep7JobsExcnVldtn"/>
+          <include name="testStep3BFSIResponsePopup"/>
+          <include name="testStep4BFSIRespPropsVldtn"/>
+          <include name="testStep2BFUIImagerySubmit"/>
+        </methods>
+      </class> <!-- EndToEnd.BFUIJobsExcnVldtnTest -->
+      <class name="TenConcurrentUser.BFUIJobsExcnVldtnTest">
+        <methods>
+          <include name="testStep4BFSIRespPropsVldtn"/>
+          <include name="testStep1BFLogin"/>
+          <include name="testStep2BFUIImagerySubmit"/>
+          <include name="testStep3BFSIResponsePopup"/>
+          <include name="testStep6BFRunAlgoVldtn"/>
+          <include name="testStep7JobsExcnVldtn"/>
+        </methods>
+      </class> <!-- TenConcurrentUser.BFUIJobsExcnVldtnTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
