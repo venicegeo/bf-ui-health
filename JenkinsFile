@@ -1,0 +1,23 @@
+node ('sl62') {
+    git url: 'https://github.com/venicegeo/bf-ui-health.git', branch: 'master'
+       // stage 'OWASP Check'
+      //  sh '/opt/dependency-check/bin/dependency-check.sh --project "BF UI" --scan "." --format "XML" --enableExperimental'
+      //  sh "/bin/curl -v --insecure -H 'Accept: application/json' -X POST --form file=@dependency-check-report.xml https://threadfix.devops.geointservices.io/rest/applications/63/upload?apiKey=$THREADFIXKEY"
+        //**GeoAxis-Geoserver health check**
+     stage 'Health Check'
+     try {
+     pipelineTriggers([
+          cron('H/59 7 * * *')
+         ])
+       ])
+     //add your code here//
+    }
+    catch (err) {
+      currentBuild.result = "FAILURE"
+       mail body: "project build error is here: ${env.BUILD_URL}" ,
+            subject: 'project build failed',
+            to: 'afroje.reshma@gmail.com' 
+       throw err
+    }
+}
+
