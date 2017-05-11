@@ -9,7 +9,7 @@ node ('sl62') {
      pipelineTriggers([
           cron('H/59 7 * * *')
          ])
-       ])
+      
      //add your code here//
     }
     catch (err) {
